@@ -48,3 +48,17 @@ ScrollReveal().reveal(".discover_card_content",{
     delay: 200
 })
 
+
+//blogs
+
+ScrollReveal().reveal(".blogs_card", {
+    duration: 1000,
+    interval: 400
+})
+
+//journals
+ScrollReveal().reveal(".journals_card",{
+    ...scrollRevealOption,
+    interval: 500,
+    delay: 200
+})
