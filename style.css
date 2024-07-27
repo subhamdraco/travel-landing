@@ -517,6 +517,26 @@ nav {
     border-top: 1px solid var(--extra-light);
 }
 
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /*Fixed position */
+    bottom: 30px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Make sure it is on top of other elements */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #f0e0e0; /* Set a background color */
+    color: rgb(17, 17, 17); /* White text color */
+    cursor: pointer; /* Pointer/hand icon */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.5rem;
+}
+
+#scrollTopBtn:hover {
+background-color: #333; /* Darker background on hover */
+color: white;
+}
 
 @media(width < 900px){
     .link:not(.search){
@@ -612,6 +632,8 @@ nav {
         grid-area: unset;
     }
 }
+
+
  
 
 
