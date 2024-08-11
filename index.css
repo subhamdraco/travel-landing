@@ -6,7 +6,7 @@
     --bg-color: #C63C51;
     --extra-light: rgba(255, 255, 255, 0.5);
     --white: #ffffff;
-    --max-width: 1400px;
+    --max-width: 100%;
     --secondary-color: #d71bf0;
     --header-font: "Lisu Bosa serif";
 }
