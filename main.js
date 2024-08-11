@@ -1,21 +1,3 @@
-let scrollTopBtn = document.getElementById("scrollTopBtn");
-
-window.onscroll = function() {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollTopBtn.style.display = "block";
-  } else {
-    scrollTopBtn.style.display = "none";
-  }
-}
-
-scrollTopBtn.onclick = function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
 const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav_links")
 
@@ -24,10 +6,11 @@ hamburger.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
 })
 
-document.querySelectorAll(".link").forEach(n => n.addEventListener("click", () => {
+document.querySelectorAll(".links").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
+
 
 const scrollRevealOption = {
     distance: "50px",
@@ -36,24 +19,41 @@ const scrollRevealOption = {
 }
 
 // header container
-ScrollReveal().reveal(".header_container h1", scrollRevealOption)
+ScrollReveal().reveal(".header_grid_content h1", scrollRevealOption)
 
-ScrollReveal().reveal(".header_container h4", {
+ScrollReveal().reveal(".header_grid_content h4", {
     ...scrollRevealOption,
     delay: 500,
 })
 
-ScrollReveal().reveal(".header_container .btn", {
+ScrollReveal().reveal(".header_grid_content img", {
+    ...scrollRevealOption,
+    delay: 700,
+})
+
+ScrollReveal().reveal(".header_grid_content .btn", {
     ...scrollRevealOption,
     delay: 1000,
 })
 
+//services
+
+ScrollReveal().reveal(".cards .card", {
+    ...scrollRevealOption,
+    interval: 300,
+    delay: 200,
+})
 //about
 
 ScrollReveal().reveal(".about_container .section_header",scrollRevealOption)
 ScrollReveal().reveal(".about_container .section_subheader",{
     ...scrollRevealOption,
     delay: 500,
+})
+
+ScrollReveal().reveal(".about_image img",{
+    ...scrollRevealOption,
+    delay: 600,
 })
 
 ScrollReveal().reveal(".about_container .about_flex",{
@@ -65,33 +65,3 @@ ScrollReveal().reveal(".about_container .btn",{
     ...scrollRevealOption,
     delay: 1500,
 })
-
-// discover
-
-ScrollReveal().reveal(".discover_card",{
-    ...scrollRevealOption,
-    interval: 500,
-})
-
-ScrollReveal().reveal(".discover_card_content",{
-    ...scrollRevealOption,
-    interval: 500,
-    delay: 200
-})
-
-
-//blogs
-
-ScrollReveal().reveal(".blogs_card", {
-    duration: 1000,
-    interval: 400
-})
-
-//journals
-ScrollReveal().reveal(".journals_card",{
-    ...scrollRevealOption,
-    interval: 500,
-    delay: 200
-})
-
-
