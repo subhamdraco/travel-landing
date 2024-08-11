@@ -11,6 +11,18 @@ document.querySelectorAll(".links").forEach(n => n.addEventListener("click", () 
     navMenu.classList.remove("active");
 }))
 
+const navbar = document.getElementById('nav_bar');
+
+const handleScroll = () => {
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+};
+
+window.addEventListener('scroll', handleScroll);
+
 
 const scrollRevealOption = {
     distance: "50px",
